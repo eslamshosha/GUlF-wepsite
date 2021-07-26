@@ -1611,6 +1611,9 @@ html[dir=rtl] .second-footer .saudi-img{
         order: 3;
         display: flex;
     }
+    .design-text span{
+        padding-top: 4px;
+    }
     .second-footer .saudi-img,
     html[dir=rtl] .second-footer .saudi-img{
         transform: none;
