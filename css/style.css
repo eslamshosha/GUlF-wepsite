@@ -402,7 +402,7 @@ html[dir=rtl] .search-button{
 /*                          main-slider                             */
 /*                                about us section                                */
 .about-section{
-    margin-bottom: 273px;
+    margin-bottom: 60px;
 }
 .about-section .about-parent{
     position: relative;
@@ -410,8 +410,8 @@ html[dir=rtl] .search-button{
 
 .about-section .about-cont{
     display: flex;
-    position: absolute;
-    top: -80px;
+    position: relative;
+    margin-top: -80px;
     z-index: 9;
 }
 .about-cont .about-box{
@@ -533,6 +533,7 @@ html[dir=rtl] .image-row .swiper-slidees:last-of-type{
 }
 .image-row .image-box{
     border-radius: 50%;
+    padding: 5px;/*for big image*/
     width: 110px;
     height: 110px;
     background-color: #048dfd;
@@ -545,9 +546,8 @@ html[dir=rtl] .image-row .swiper-slidees:last-of-type{
     justify-content: center;
     transition: all 0.3s ease-in-out;
 }
-.image-row .image-box i{
-    font-size: 53px;
-    color: #fff;
+.image-row .image-box img{
+    max-width: 100%;
 }
 .image-row .image-text{
     font-size: 18px;
@@ -1516,7 +1516,7 @@ html[dir=rtl] .second-footer .saudi-img{
     /*                    menu in phone size                      */
     /*                       about section                        */
     .about-section{
-        margin-bottom: 870px;
+        margin-bottom: 30px;
     }
     .about-section .about-cont{
         flex-direction: column;
@@ -1620,16 +1620,7 @@ html[dir=rtl] .second-footer .saudi-img{
     }
     /*                                   footer                                */
 }
-@media (max-width: 364px){
-    .about-section{
-        margin-bottom: 895px;
-    }
-}
-@media (max-width: 334px){
-    .about-section{
-        margin-bottom: 960px;
-    }
-}
+
 
 .fixall{
     text-decoration: none;
