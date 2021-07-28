@@ -24,6 +24,21 @@ $(document).ready(function() {
 		
 		})
    	}
+       //This is to Open Search Box 
+	$(".search-icon").click(function() {
+		// $("body").addClass("overflow")
+		$(".search .search-icon").removeClass("open-search")
+		$(".search .search-icon").addClass("close-search")
+		$(".search-cont").addClass("search-open");
+		$(".overlay-box2").fadeIn(500);
+	});
+    $(".overlay-box2").click(function() {
+		// $("body").removeClass("overflow")
+		$(".search .search-icon").addClass("open-search")
+		$(".search .search-icon").removeClass("close-search")
+		$(".search-cont").removeClass("search-open");
+		$(".overlay-box2").fadeOut(500);
+	});
 	
 	// //main Slider Carousel
     ///////// ** main** /////////
@@ -133,15 +148,15 @@ $(document).ready(function() {
         },
         breakpoints: {
             0: {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 15,
             },
             767: {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 30,
             },
             992: {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 30,
             },
             1199: {

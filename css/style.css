@@ -301,19 +301,6 @@ html[dir=rtl] .search-button{
   .main .pro-img img{
       width: 100%;
   }
-  .swiper-pagination {
-    position: relative;
-    width: 100%;
-    bottom: auto;
-    display: none;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin-top: 30px;
-}
   .main-slider .swiper-btn {
     position: absolute;
     z-index: 1;
@@ -358,10 +345,10 @@ html[dir=rtl] .search-button{
     right: 57px;
   }
   
-  .swiper-pagination {
-    position: relative;
+  .main-slider .swiper-pagination {
+    position: absolute;
     width: 100%;
-    bottom: auto;
+    bottom: 22px;
     display: none;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -369,11 +356,10 @@ html[dir=rtl] .search-button{
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin-top: 30px;
   }
   
   @media (max-width: 991px) {
-    .swiper-pagination {
+    .main-slider .swiper-pagination {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -392,12 +378,12 @@ html[dir=rtl] .search-button{
     border-radius: 50%;
   }
   
-  .swiper-pagination .swiper-pagination-bullet:hover {
-    background-color: #048dfd;
+  .main-slider .swiper-pagination .swiper-pagination-bullet:hover {
+    background-color: #fff;
   }
   
-  .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background-color: #048dfd;
+  .main-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #fff;
     opacity: 1;
   }
 
@@ -480,6 +466,53 @@ html[dir=ltr] .about-link i{
     width: 100%;
     object-fit: cover;
 }
+.banner-content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 70px;
+}
+
+html[dir=rtl] .banner-content{
+    text-align: right;
+    left: unset;
+    right: 70px;
+}
+.banner-content .banner-head{
+    font-size: 32px;
+    font-family: "TajawalExtraBold";
+    color: #000;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+.banner-content .banner-pargh{
+    font-size: 22px;
+    font-family: "TajawalMedium";
+    color: #000;
+    line-height: 25px;
+    margin-bottom: 30px;
+}
+.banner-content .banner-button{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 55px;
+    font-size: 18px;
+    font-family: "TajawalBold";
+    background-color: #048dfd;
+    color: #fff;
+    border: none;
+    border-radius: 27px;
+    transition: all 0.3s ease-in-out;
+}
+.banner-content .banner-button:hover{
+    background-color: #fff;
+    color: #048dfd;
+    border: 1px solid #048dfd;
+}
+
 
 /*                        banner-image section                    */
 /*                           service-section                          */
@@ -567,6 +600,35 @@ html[dir=rtl] .image-row .swiper-slidees:last-of-type{
 }
 
 .image-row a{text-decoration: none;}
+.image-cat .swiper-pagination {
+    position: relative;
+    width: 100%;
+    bottom: auto;
+    display: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  @media (max-width: 991px) {
+    .image-cat .swiper-pagination {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+  }
+  .image-cat .swiper-pagination .swiper-pagination-bullet:hover {
+    background-color: #048dfd;
+  }
+  
+  .image-cat .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #048dfd;
+    opacity: 1;
+  }
 
 
 /*                           image-cat section                        */
@@ -603,9 +665,11 @@ html[dir=rtl] .image-row .swiper-slidees:last-of-type{
     justify-content: center;
     overflow: hidden;
     width: 100%;
+    height: 126px;
 }
   
 .brand-slider .brand-img img { 
+    max-height: 100%;
     overflow: hidden;
     opacity: 0.5;
     filter: grayscale(1);
@@ -945,6 +1009,7 @@ html[dir=rtl] .image-row .swiper-slidees:last-of-type{
 }
   
 .blog .blog-img img {
+    width: 100%;
     overflow: hidden;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -1110,7 +1175,7 @@ html[dir=ltr] .blog .blog-link::before{
 /*                             blog section                          */
 /*                              footer                               */
 footer {
-    padding-bottom: 45px;
+    padding-bottom: 20px;
 }
 footer a{
     text-decoration: none;
@@ -1293,6 +1358,17 @@ html[dir=rtl] .second-footer .saudi-img{
 /*                    menu in phone size                      */
 
 @media (max-width: 1199px){
+    /*logo*/
+    html[dir=rtl] .nav-header figure{
+        text-align: center;
+    }
+    .nav-header figure{
+        text-align: center;
+    }
+    .nav-header figure img{
+        max-width: 60%;
+    }
+    /*logo*/
     /*header-info*/
     .header-info .info-cont{
         display: none;
@@ -1302,15 +1378,51 @@ html[dir=rtl] .second-footer .saudi-img{
         justify-content: space-between;
     } */
     /*header-info*/
+    
+    /*open search*/
     .search-cont{
-        width: 100%;
+        width: 90%;
+        position: absolute;
+        top: -500px;
+        transition: all 0.4s ease-in-out;
+        z-index: 99999;
+        left: 50%;
+    transform: translateX(-50%);
     }
+    .search-open {
+        top: 100px;
+    }
+    .search-icon{
+        display: inline-flex;
+        width: 24px;
+        justify-content: flex-end;
+    }
+    .open-search::after {
+        content: "\f002";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 700;
+        text-decoration: none;
+        color: #000;
+        font-size: 24px;
+        width: 24px;
+    }
+    .close-search::after {
+        content: "\f00d";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 700;
+        text-decoration: none;
+        color: #000;
+        font-size: 24px;
+        width: 24px;
+    }
+    /*open search*/
     .lang-section.hide-big{
         display: block;
-        text-align: center;
+        text-align: start;
+        padding: 0 15px;
     }
     .lang-section.hide-big .lang-word{
-        color: #fff;
+        color: #000;
         font-size: 17px;
         font-family: "TajawalMedium";
     }
@@ -1319,7 +1431,7 @@ html[dir=rtl] .second-footer .saudi-img{
     }
     .nav-header .dropdown>a:hover,
     .chevron-down:hover {
-        color: #fff;
+        color: #000;
     }
     .navgition .dropdown-content {
         background-color: transparent;
@@ -1339,12 +1451,12 @@ html[dir=rtl] .second-footer .saudi-img{
         transition: none;
     }
     .nav-header{
-        padding: 20px 0 18px;
+        padding: 15px 0 15px;
     }
     
     .menu-bars {
         font-size: 24px;
-        color: #048dfd;
+        color: #000;
         transition: .3s;
         display: block;
         margin-right: 8px;
@@ -1359,24 +1471,25 @@ html[dir=rtl] .second-footer .saudi-img{
     .navgition {
         display: block;
         position: fixed;
-        padding: 30px;
+        /* padding: 30px; */
         padding-top: 0;
-        left: 0px;
+        left: -1000px;
         top: 0;
         bottom: 0;
-        width: 100%;
+        width: 80%;
         height: 100%;
-        background-color: rgb(4, 141, 253, .969);
+        background-color: rgb(255, 255, 255, .969);
         transition: .4s;
         z-index: 200;
-        opacity: 0;
-        visibility: hidden;
         overflow-y: auto;
         transition: all .3s ease-in-out;
     }
+    html[dir=rtl] .navgition{
+        left: auto;
+        right: -1000px;
+    }
     .reset-left {
-        opacity: 1;
-        visibility: visible;
+        left: 0;
     }
     html[dir=rtl] 
     .reset-left {
@@ -1397,18 +1510,19 @@ html[dir=rtl] .second-footer .saudi-img{
         padding: 20px 0 18px;
     }
     .nav-head .first-head{
-        display: flex;
+        /* display: flex; */
+        text-align: start;
         align-items: center;
         width: 100%;
         justify-content: space-between;
-        margin-bottom: 15px;
+        margin-top: 20px;
     }
     .empty-div{flex: 1;}
     .nav-head img{
         filter : brightness(0) invert(1);
     }
     .nav-head .close-btn {
-        color: #fff;
+        color: #000;
         font-size: 24px;
         text-align: start;
     }
@@ -1417,7 +1531,7 @@ html[dir=rtl] .second-footer .saudi-img{
         flex-direction: column;
         text-align: left;
         align-items: baseline; 
-             
+        padding: 0 15px;     
     }
     .nav-header li{
         margin-right:  0;
@@ -1440,11 +1554,11 @@ html[dir=rtl] .second-footer .saudi-img{
     .nav-header li a{
         display: flex;
         align-items: center;
-        justify-content: center;
-        color: #fff;
+        /* justify-content: center; */
+        color: #000;
     }
     .nav-header li a:hover{
-        color: #fff;
+        color: #000;
     }
 
     .big-menu .dropdown-content {
@@ -1458,7 +1572,7 @@ html[dir=rtl] .second-footer .saudi-img{
         visibility: visible;
     }
     .nav-header li a:hover, .nav-header .lang-word:hover{
-        color: #fff;
+        color: #000;
     }
     .dropdown-content::before{
         display: none;
@@ -1467,7 +1581,8 @@ html[dir=rtl] .second-footer .saudi-img{
         text-align: right;
     }
     .nav-header .dropdown-content a{
-        color: #fff;
+        color: #000;
+        text-align: start;
     }
     .header-info .empty-div,
     .header-info .lang-section{
@@ -1531,15 +1646,54 @@ html[dir=rtl] .second-footer .saudi-img{
     }
     .about-section .about-cont{
         flex-direction: column;
+        margin-top: 0;
     }
     .about-cont .about-box{
-        margin-bottom: 15px;
+        margin-bottom: 0;
         padding: 30px 15px;
         flex: auto;
-        min-height: 293px;
+        /* min-height: 293px; */
+    }
+    .about-box .about-head{
+        margin-bottom: 15px;
     }
     
     /*                       about section                        */
+    /*                        banner section                      */
+    .banner-image img{
+        min-height: 240px;
+    }
+    .banner-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    html[dir=rtl] .banner-content{
+        right: 0;
+        transform: unset;
+    }
+    .banner-content .banner-head{
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    .banner-content .banner-pargh{
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+    .banner-content .banner-button{
+        width: 160px;
+        height: 42px;
+        text-align: center;
+        font-size: 16px;
+    }
+    /*                        banner section                      */
     /*                        image-cat section                   */
     .image-row{
         padding: 0;
@@ -1572,12 +1726,10 @@ html[dir=rtl] .second-footer .saudi-img{
     /*                       blog slider                       */
     .blog-section{
         margin-bottom: 55px;
+        padding: 75px 0 90px;
     }
     .blog .blog-content{
         padding: 25px 10px 30px;
-    }
-    .blog .blog-name{
-        font-size: 15px;
     }
     .blog .blog-pargh{
         text-align: justify;
@@ -1599,14 +1751,23 @@ html[dir=rtl] .second-footer .saudi-img{
     .first-footer .footer-pargh{
         padding: 0;
         text-align: center;
-        margin-bottom: 15px;
+        margin-bottom: 30px;
     }
     .list-footer .list-head, .news-letter .news-header{
         text-align: center;
         margin-bottom: 10px;
     }
     .first-footer .list-cont{
+        justify-content: unset;
+        flex-wrap: wrap;
         padding: 0;
+    }
+    .nav-foot-cont {
+        width: 50%;
+    }
+    ul.nav-foot.list-unstyled{
+        text-align: center;
+        margin-bottom: 30px;
     }
     html[dir=rtl] .first-footer .list-cont{
         padding: 0;

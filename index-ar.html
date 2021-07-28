@@ -49,7 +49,12 @@
         </div>
         <div class="top-header">
             <div class="container">
-                <div class="nav-header plus-class">
+                <div class="nav-header plus-class">   
+                    <div class="show-icons">
+                        <a class="menu-bars fixall" id="menu-id" href="#!">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
                     <figure class="img-logo">
                         <a href="#"><img src="images/logo.png" class="img-fluid"></a>
                     </figure>
@@ -57,17 +62,9 @@
                         <div class="nav-head">
                             <div class="container">
                                 <div class="first-head">
-                                    <figure><img src="images/logo.png" alt="img-logo"></figure>
                                     <a class="fixall close-btn">
                                         <i class="fas fa-times"></i>
                                     </a>
-                                </div>
-                                <div class="search-cont">
-                                    <input type="email" name="txtemail" value="" class="search-input"
-                                        placeholder="البحث">
-                                    <button type="submit" class="search-button">
-                                        <i class="fas fa-search"></i>
-                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -128,16 +125,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="search-cont d-none d-xl-block">
+                    <div class="search-cont">
                         <input type="email" name="txtemail" value="" class="search-input"
                             placeholder="البحث">
                         <button type="submit" class="search-button">
                             <i class="fas fa-search"></i>
                         </button>
                     </div>
-                    <div class="show-icons">
-                        <a class="menu-bars fixall" id="menu-id" href="#!">
-                            <i class="fas fa-bars"></i>
+                    <div class="search-icon d-block d-xl-none">
+                        <a href="#" class="search">
+                            <span class="search-icon open-search"></span>
                         </a>
                     </div>
                 </div>
@@ -223,11 +220,18 @@
     <!-- about us section -->
     <!-- banner section -->
     <div class="banner-section">
-      <div class="container">
-          <div class="banner-image wow fadeInDown" wow-data-delay="5s">
-              <a href="#"><img src="images/banner.jpg" alt="banner-image"></a>
-          </div>
-      </div>
+        <div class="container">
+            <div class="banner-image wow fadeInDown" wow-data-delay="5s">
+                <a href="#"><img src="images/banner.jpg" alt="banner-image"></a>
+                <div class="banner-content">
+                        <h2 class="banner-head">اطلب عرض سعر الآن</h2>
+                        <p class="banner-pargh">من فضلك تواصل معنا حتى نتمكن من خدمتك بشكل متميز</p>
+                        <div class="banner-link">
+                            <a href="#" class="banner-button">طلب عرض سعر</a>
+                        </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- banner section -->
     <!-- ourservice section -->
