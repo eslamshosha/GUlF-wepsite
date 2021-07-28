@@ -466,6 +466,9 @@ html[dir=ltr] .about-link i{
     width: 100%;
     object-fit: cover;
 }
+html[dir=ltr] .banner-image img{
+    transform: rotatey(180deg);
+}
 .banner-content{
     position: absolute;
     top: 50%;
@@ -1349,6 +1352,10 @@ html[dir=rtl] .second-footer .saudi-img{
     max-width: 100%;
     margin-inline-start: 8px;
 }
+.design-text{
+    display: flex;
+    align-items: center;
+}
 
 
 /*                              footer                               */
@@ -1790,9 +1797,9 @@ html[dir=rtl] .second-footer .saudi-img{
         order: 3;
         display: flex;
     }
-    .design-text span{
+    /* .design-text span{
         padding-top: 4px;
-    }
+    } */
     .second-footer .saudi-img,
     html[dir=rtl] .second-footer .saudi-img{
         transform: none;
