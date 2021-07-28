@@ -298,6 +298,9 @@ html[dir=rtl] .search-button{
     overflow: hidden;
     width: 100%;
   }
+  .main .pro-img img{
+      width: 100%;
+  }
   .swiper-pagination {
     position: relative;
     width: 100%;
@@ -311,12 +314,11 @@ html[dir=rtl] .search-button{
     justify-content: center;
     margin-top: 30px;
 }
-  .swiper-btn {
+  .main-slider .swiper-btn {
     position: absolute;
     z-index: 1;
-    bottom: 162px;
-    -webkit-transform: none;
-    transform: none;
+    bottom: 50%;
+    transform: translateY(-50%);
     width: 42px;
     height: 42px;
     background-color: transparent;
@@ -336,7 +338,7 @@ html[dir=rtl] .search-button{
   }
   
   @media (min-width: 1320px) {
-    .swiper-btn {
+    .main-slider .swiper-btn {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -1635,6 +1637,11 @@ html[dir=rtl] .second-footer .saudi-img{
         transform: none;
     }
     /*                                   footer                                */
+}
+@media (min-width: 1200px){
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1170px;
+    }
 }
 
 .fixall{
